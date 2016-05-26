@@ -152,7 +152,6 @@ template<typename T> int base64_decode(T *output, char *input, int inputLen)
  * 					stores the decoded binary
  * 			input: the input buffer for the decoding,
  * 				   stores the base64 string to be decoded
- * 			inputLen: the length of the input buffer, in bytes
  * 		Return value:
  * 			Returns the length of the decoded string
  * 		Requirements:
@@ -164,7 +163,7 @@ template<typename T> int base64_decode(T *output, char *input)
 {
 	int inputLen=0;
     char *ch = input;
-    while (*ch && ch!='\0') {
+    while (*ch && ch!='\0') {//compute string input length
         *ch++;
         inputLen++;
     }
