@@ -10,6 +10,7 @@
  
  Created 29 April 2015
  by Nathan Friedly - http://nfriedly.com/
+ Edited by Karel Blavka
  
  This example code is in the public domain.
 
@@ -92,6 +93,12 @@ void setup()
   char out4[10];
   base64_decode(out4, in4,4);
   Serial.println(out4);
+  
+  Serial.println("======= base64_decode 2 ========");
+  
+  char out5[10];
+  base64_decode(out5, in4 ); //inputLen is automatically computed from input
+  Serial.println(out5);
   
 }
 
